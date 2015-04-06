@@ -14,7 +14,6 @@ namespace OOP
         private int square;
         private int x;
         private int y;
-        private int abc; 
 
         public Foursquare(int x, int y, int side, Color color)
         {
