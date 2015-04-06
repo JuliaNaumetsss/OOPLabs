@@ -44,12 +44,12 @@ namespace OOP
             Point drawPoint = new Point(95, 110);
             g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
         }
-        public override void Draw(Graphics g, Pen pen)
+       /* public override void Draw(Graphics g, Pen pen)
         {
             pen.Color = color;
             g.DrawLine(pen, x1, y1, x3, y3);
             g.DrawLine(pen, x3, y3, x2, y2);
             g.DrawLine(pen, x1, y1, x2, y2);
-        }
+        }*/
     }
 }

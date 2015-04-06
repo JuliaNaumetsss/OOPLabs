@@ -15,14 +15,13 @@ namespace OOP
         private int y;
 
 
-        public Circle(int x, int y, int radius, Color color)
+        public Circle(int radius)
         {
 
  
             this.color = color;
             this.radius = radius;
-            this.x = x;
-            this.y = y;
+
             square = radius * radius * Math.PI;
 
         }
@@ -32,11 +31,11 @@ namespace OOP
             Point drawPoint = new Point(315, 95);
             g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
         }
-        public override void Draw(Graphics g, Pen pen)
+       /* public override void Draw(Graphics g, Pen pen)
         {
      
             pen.Color = color;
             g.DrawEllipse(pen, x, y, radius, radius);
-        }
+        }*/
     }
 }

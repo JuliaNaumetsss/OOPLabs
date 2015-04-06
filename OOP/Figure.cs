@@ -20,6 +20,7 @@ namespace OOP
             //calculation of area figures
         }
 
-        public abstract void Draw(Graphics g, Pen pen);
+       //public abstract void Draw(Graphics g, Pen pen);
+
     }
 }

@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace OOP
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+       /* private void button1_Click(object sender, EventArgs e)
+        {
+            Graphics g = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+            List<Figure> listOfFigures = new List<Figure>();
+            Figure f;
+
+           f = new Foursquare (40, Color.Black);
+           listOfFigures.Add(f);
+           f.Square(g);
+
+            f = new Rectangle(120, 20, 80, 40, Color.Blue);
+            listOfFigures.Add(f);
+            f.Square(g);
+
+            f = new Triangle(80, 80, 100, 120, 40, 160, Color.BlueViolet);
+            listOfFigures.Add(f);
+            f.Square(g);
+
+            f = new Parallelogram(120, 140, 140, 100, 80, Color.Red);
+            listOfFigures.Add(f);
+            f.Square(g);
+
+            f = new Circle(240, 80, 60, Color.Pink);
+            listOfFigures.Add(f);
+            f.Square(g);
+
+            foreach (Figure figure in listOfFigures) ;
+              //  figure.Draw(g, pen);
+        }
+        */
+        private void DrawFoursquare_Click(object sender, EventArgs e)
+        {
+            Graphics g = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Red);
+            Figure f;
+
+            int x = Convert.ToInt32(x1.Text);
+            if (x > 250)
+                MessageBox.Show("введите координату x меньше 250");
+            int y = Convert.ToInt32(y1.Text);
+            if (y > 250)
+                MessageBox.Show("введите координату y меньше 250");
+            int side = Convert.ToInt32(side1.Text);
+            if (side > 200)
+                MessageBox.Show("введите сторону меньше 200");
+            f = new Foursquare(side);
+
+            f.Square(g);
+          g.DrawRectangle(pen, x, y, side, side);
+    }
+    
+
+
+        private void x1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"\d")) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+    }
+}

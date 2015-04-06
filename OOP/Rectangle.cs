@@ -15,13 +15,11 @@ namespace OOP
         private int side2;
         private int square;
 
-        public Rectangle(int x, int y, int width, int length, Color color)
+        public Rectangle(int width, int length)
         {
-            this.x = x;
-            this.y = y;
+      
             this.side1 = width;
             this.side2 = length;
-            this.color = color;
             square = side1 * side2;
 
         }
@@ -32,10 +30,10 @@ namespace OOP
             g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
         }
 
-        public override void Draw(Graphics g, Pen pen)
+       /* public override void Draw(Graphics g, Pen pen)
         {
             pen.Color = color;
             g.DrawRectangle(pen, x, y, side1, side2);
-        }
+        }*/
     }
 }

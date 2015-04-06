@@ -15,12 +15,10 @@ namespace OOP
         private int x;
         private int y;
 
-        public Foursquare(int x, int y, int side, Color color)
+        public Foursquare(int side)
         {
             this.color = color;
             this.side = side;
-            this.x = x;
-            this.y = y;
             square = side * side;
         }
 
@@ -32,9 +30,9 @@ namespace OOP
         }
 
        
-        public override void Draw(System.Drawing.Graphics g, System.Drawing.Pen pen)
-        { 
-            g.DrawRectangle(pen, x, y, side, side);
-        }
+       // public override void Draw(System.Drawing.Graphics g, System.Drawing.Pen pen)
+        //{ 
+          //  g.DrawRectangle(pen, x, y, side, side);
+        //}
     }
 }
