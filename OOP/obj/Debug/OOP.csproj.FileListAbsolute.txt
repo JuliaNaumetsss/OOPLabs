@@ -1,0 +1,30 @@
+c:\users\юлия\documents\visual studio 2012\Projects\OOP\OOP\bin\Debug\OOP.exe.config
+c:\users\юлия\documents\visual studio 2012\Projects\OOP\OOP\bin\Debug\OOP.exe
+c:\users\юлия\documents\visual studio 2012\Projects\OOP\OOP\bin\Debug\OOP.pdb
+c:\users\юлия\documents\visual studio 2012\Projects\OOP\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
+c:\users\юлия\documents\visual studio 2012\Projects\OOP\OOP\obj\Debug\OOP.exe
+c:\users\юлия\documents\visual studio 2012\Projects\OOP\OOP\obj\Debug\OOP.pdb
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\bin\Debug\OOP.exe.config
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\obj\Debug\OOP.exe
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\obj\Debug\OOP.pdb
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\bin\Debug\OOP.exe
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\bin\Debug\OOP.pdb
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\obj\Debug\OOP.Form1.resources
+C:\Users\Beinia\Downloads\OOP\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\bin\Debug\OOP.exe.config
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.exe
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.pdb
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\bin\Debug\OOP.exe
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\bin\Debug\OOP.pdb
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.Form1.resources
+E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
+D:\Projects\FirstLab\OOP\bin\Debug\OOP.exe.config
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.exe
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.pdb
+D:\Projects\FirstLab\OOP\bin\Debug\OOP.exe
+D:\Projects\FirstLab\OOP\bin\Debug\OOP.pdb
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.Form1.resources
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
