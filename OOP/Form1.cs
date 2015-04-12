@@ -77,7 +77,7 @@ namespace OOP
             
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Red);
-            Figure f;
+
 
             int x = Convert.ToInt32(x1.Text);
             Check(x);
@@ -85,9 +85,13 @@ namespace OOP
             Check(y);
             int side = Convert.ToInt32(side1.Text);
             Check(side);
-            f = new Foursquare(side);
+            Figure.Coord coordinate = new Figure.Coord(x, y);
+            Foursquare f = new Foursquare(side);
             if (ok)
+            {
                 f.Square(g);
+                f.Draw(g, pen, coordinate, side);
+            }
 
           //g.DrawRectangle(pen, x, y, side, side);
          // Draw(Graphics g, Pen pen);
@@ -154,6 +158,7 @@ namespace OOP
             if (ok)
             {
                 f.Square(g);
+             
                 f.Draw(g, pen, coord, a, b);
             }
         }
@@ -198,38 +203,7 @@ namespace OOP
             checkSymbols(e);
         }
 
-        /*private void DrawParallelogram_Click(object sender, EventArgs e)
-        {
-            Graphics g = pictureBox1.CreateGraphics();
-            Pen pen = new Pen(Color.BlueViolet);
-            Figure f;
-
-            int Ax = Convert.ToInt32(x3.Text);
-            Check(Ax);
-            int Ay = Convert.ToInt32(y3.Text);
-            Check(Ay);
-            int Bx = Convert.ToInt32(x4.Text);
-            Check(Bx);
-            int By = Convert.ToInt32(y4.Text);
-            Check(By);
-            int Cx = Convert.ToInt32(x5.Text);
-            Check(Cx);
-            int Cy = Convert.ToInt32(y5.Text);
-            Check(Cy);
-            int Dx = Convert.ToInt32(x6.Text);
-            Check(Dx);
-            int Dy = Convert.ToInt32(y6.Text);
-            Check(Dy);
-            int a = Convert.ToInt32(side2.Text);
-            Check(a);
-            int b = Convert.ToInt32(side3.Text);
-            Check(b);
-            f = new Rectangle(a, b);
-            if (ok)
-                f.Square(g);
-            g.DrawRectangle(pen, x, y, a, b);
-        }
-        */
+        
         private void Xc_KeyPress(object sender, KeyPressEventArgs e)
         {
             checkSymbols(e);
@@ -254,13 +228,14 @@ namespace OOP
             Check(x);
             int y = Convert.ToInt32(Yc.Text);
             Check(y);
-            int circleRadius = Convert.ToInt32(radius.Text);
-            Check(circleRadius);
-            Circle f = new Circle(circleRadius);
+            Figure.Coord coordinate = new Figure.Coord(x, y);
+            float circleRadius = Convert.ToInt32(radius.Text);
+           // Check(circleRadius);
+            Circle f = new Circle(circleRadius, coordinate);
             if (ok)
             {
                 f.Square(g);
-                f.Draw(g, pen, x, y, circleRadius);
+                f.Draw(g, pen,coordinate, circleRadius);
             }
             //g.DrawEllipse(pen, x, y, circleRadius, circleRadius);
         }
@@ -279,10 +254,14 @@ namespace OOP
             Check(x1);
             int x2 = Convert.ToInt32(x4.Text);
             Check(x2);
+            if (x1 == x2)
+                MessageBox.Show("координаты x не должны совпадать");     
             int y1 = Convert.ToInt32(y3.Text);
             Check(y1);
             int y2 = Convert.ToInt32(y4.Text);
             Check(y2);
+            if (y1 == y2)
+                MessageBox.Show("координаты y не должны совпадать"); 
             int side = Convert.ToInt32(side4.Text);
             Check(side);
             Figure.Coord coord1 = new Figure.Coord(x1, y1);

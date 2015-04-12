@@ -9,18 +9,20 @@ namespace OOP
 {
     class Circle : Figure
     {
-        private int radius;
+        public float radius;
         private double square;
-        private int x;
-        private int y;
+        public int x;
+        public int y;
 
 
-        public Circle(int radius)
+        public Circle(float radius, Coord coordinate)
         {
 
- 
+           // this.x
             this.color = color;
             this.radius = radius;
+            this.x = coordinate.x;
+            this.y = coordinate.y;
 
             square = radius * radius * Math.PI;
 

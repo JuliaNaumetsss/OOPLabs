@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
+
     public abstract class Figure
     {
         protected Color color; //feature common to all
@@ -33,12 +34,14 @@ namespace OOP
 
 
         // draw circle
-        public void Draw(Graphics g, Pen pen, int x, int y, int circleRadius) 
+        public void Draw(Graphics g, Pen pen, Coord coordinate, float circleRadius)
         {
             pen.Color = Color.Red;
-            g.DrawEllipse(pen, x, y, circleRadius, circleRadius);
+            
+            //circle.ra
+            g.DrawEllipse(pen, coordinate.x, coordinate.y, circleRadius, circleRadius);
         }
-
+        //draw rectangle
         public void Draw(Graphics g, Pen pen, Coord coordinate, int side1, int side2)
         {
             pen.Color = Color.Blue;
@@ -46,7 +49,7 @@ namespace OOP
             int y = coordinate.y;
             g.DrawRectangle(pen, x, y, side1, side2);
         }
-
+        // draw parallelogram
         public void Draw(Graphics g, Pen pen, Coord coord1, Coord coord2, int length)
         {
             pen.Color = Color.Pink;
@@ -55,5 +58,12 @@ namespace OOP
             g.DrawLine(pen, coord2.x + length, coord2.y, coord1.x + length, coord1.y);
             g.DrawLine(pen, coord1.x + length, coord1.y, coord1.x, coord1.y);
         }
+
+        // draw foursquare
+        public void Draw(Graphics g, Pen pen, Coord coordinate, int length)
+        {
+            pen.Color = Color.Green;
+            g.DrawRectangle(pen, coordinate.x, coordinate.y, length, length);
+        } 
     }
 }

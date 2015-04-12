@@ -20,11 +20,11 @@ E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\bin\Debug\OOP.pdb
 E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
 E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.Form1.resources
 E:\2 курс\2сем\2 сем\ООП\лр1\OOP\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
-D:\Projects\FirstLab\OOP\bin\Debug\OOP.exe.config
-D:\Projects\FirstLab\OOP\obj\Debug\OOP.exe
-D:\Projects\FirstLab\OOP\obj\Debug\OOP.pdb
-D:\Projects\FirstLab\OOP\bin\Debug\OOP.exe
-D:\Projects\FirstLab\OOP\bin\Debug\OOP.pdb
 D:\Projects\FirstLab\OOP\obj\Debug\OOP.csprojResolveAssemblyReference.cache
 D:\Projects\FirstLab\OOP\obj\Debug\OOP.Form1.resources
 D:\Projects\FirstLab\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
+D:\Projects\FirstLab\OOP\bin\Debug\OOP.exe.config
+D:\Projects\FirstLab\OOP\bin\Debug\OOP.exe
+D:\Projects\FirstLab\OOP\bin\Debug\OOP.pdb
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.exe
+D:\Projects\FirstLab\OOP\obj\Debug\OOP.pdb
