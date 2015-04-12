@@ -18,14 +18,14 @@ namespace OOP
 
 
 
-        public Parallelogram(int x1, int y1, int x2, int y2, int length, Color color )
+        public Parallelogram(Coord coord1 , Coord coord2, int length)
         {
-            this.color = color;
+           // this.color = color;
          
-            this.x1 = x1;
-            this.y1 = y1;
-            this.x2 = x2;
-            this.y2 = y2;
+            this.x1 = coord1.x;
+            this.y1 = coord1.y;
+            this.x2 =coord2.x;
+            this.y2 = coord2.y;
             this.length = length;
             square = Math.Abs(y1 - y2) * length;
       

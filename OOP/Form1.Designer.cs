@@ -51,22 +51,17 @@
             this.y3 = new System.Windows.Forms.TextBox();
             this.x4 = new System.Windows.Forms.TextBox();
             this.y4 = new System.Windows.Forms.TextBox();
-            this.x5 = new System.Windows.Forms.TextBox();
-            this.y5 = new System.Windows.Forms.TextBox();
-            this.x6 = new System.Windows.Forms.TextBox();
-            this.y6 = new System.Windows.Forms.TextBox();
+            this.side4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.labelll = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.DrawCircle = new System.Windows.Forms.Button();
             this.Xc = new System.Windows.Forms.TextBox();
             this.Yc = new System.Windows.Forms.TextBox();
             this.radius = new System.Windows.Forms.TextBox();
+            this.DrawTriangle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,7 +233,7 @@
             this.DrawParallelogram.TabIndex = 19;
             this.DrawParallelogram.Text = "Draw Parallelogram";
             this.DrawParallelogram.UseVisualStyleBackColor = true;
-           // this.DrawParallelogram.Click += new System.EventHandler(this.DrawParallelogram_Click);
+            this.DrawParallelogram.Click += new System.EventHandler(this.DrawParallelogram_Click);
             // 
             // x3
             // 
@@ -272,37 +267,13 @@
             this.y4.TabIndex = 23;
             this.y4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.y4_KeyPress);
             // 
-            // x5
+            // side4
             // 
-            this.x5.Location = new System.Drawing.Point(532, 119);
-            this.x5.Name = "x5";
-            this.x5.Size = new System.Drawing.Size(62, 20);
-            this.x5.TabIndex = 24;
-            this.x5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.x5_KeyPress);
-            // 
-            // y5
-            // 
-            this.y5.Location = new System.Drawing.Point(532, 163);
-            this.y5.Name = "y5";
-            this.y5.Size = new System.Drawing.Size(62, 20);
-            this.y5.TabIndex = 25;
-            this.y5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.y5_KeyPress);
-            // 
-            // x6
-            // 
-            this.x6.Location = new System.Drawing.Point(618, 119);
-            this.x6.Name = "x6";
-            this.x6.Size = new System.Drawing.Size(62, 20);
-            this.x6.TabIndex = 26;
-            this.x6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.x6_KeyPress);
-            // 
-            // y6
-            // 
-            this.y6.Location = new System.Drawing.Point(618, 163);
-            this.y6.Name = "y6";
-            this.y6.Size = new System.Drawing.Size(62, 20);
-            this.y6.TabIndex = 27;
-            this.y6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.y6_KeyPress);
+            this.side4.Location = new System.Drawing.Point(532, 163);
+            this.side4.Name = "side4";
+            this.side4.Size = new System.Drawing.Size(62, 20);
+            this.side4.TabIndex = 25;
+            this.side4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.y5_KeyPress);
             // 
             // label8
             // 
@@ -321,24 +292,6 @@
             this.labelll.Size = new System.Drawing.Size(12, 13);
             this.labelll.TabIndex = 29;
             this.labelll.Text = "x";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(559, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(12, 13);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "x";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(641, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 13);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "x";
             // 
             // label12
             // 
@@ -363,18 +316,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(559, 148);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(12, 13);
+            this.label14.Size = new System.Drawing.Size(26, 13);
             this.label14.TabIndex = 34;
-            this.label14.Text = "y";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(641, 142);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 13);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "y";
+            this.label14.Text = "side";
             // 
             // DrawCircle
             // 
@@ -410,27 +354,32 @@
             this.radius.TabIndex = 39;
             this.radius.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.radius_KeyPress);
             // 
+            // DrawTriangle
+            // 
+            this.DrawTriangle.Location = new System.Drawing.Point(688, 205);
+            this.DrawTriangle.Name = "DrawTriangle";
+            this.DrawTriangle.Size = new System.Drawing.Size(121, 23);
+            this.DrawTriangle.TabIndex = 40;
+            this.DrawTriangle.Text = "Draw Triangle";
+            this.DrawTriangle.UseVisualStyleBackColor = true;
+            this.DrawTriangle.Click += new System.EventHandler(this.DrawTriangle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 380);
+            this.Controls.Add(this.DrawTriangle);
             this.Controls.Add(this.radius);
             this.Controls.Add(this.Yc);
             this.Controls.Add(this.Xc);
             this.Controls.Add(this.DrawCircle);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.labelll);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.y6);
-            this.Controls.Add(this.x6);
-            this.Controls.Add(this.y5);
-            this.Controls.Add(this.x5);
+            this.Controls.Add(this.side4);
             this.Controls.Add(this.y4);
             this.Controls.Add(this.x4);
             this.Controls.Add(this.y3);
@@ -487,21 +436,16 @@
         private System.Windows.Forms.TextBox y3;
         private System.Windows.Forms.TextBox x4;
         private System.Windows.Forms.TextBox y4;
-        private System.Windows.Forms.TextBox x5;
-        private System.Windows.Forms.TextBox y5;
-        private System.Windows.Forms.TextBox x6;
-        private System.Windows.Forms.TextBox y6;
+        private System.Windows.Forms.TextBox side4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelll;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button DrawCircle;
         private System.Windows.Forms.TextBox Xc;
         private System.Windows.Forms.TextBox Yc;
         private System.Windows.Forms.TextBox radius;
+        private System.Windows.Forms.Button DrawTriangle;
     }
 }

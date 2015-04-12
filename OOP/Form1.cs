@@ -17,7 +17,20 @@ namespace OOP
             InitializeComponent();
         }
 
+       /* public struct Coord 
+        {
+            public int x, y;
+             public Coord(int p1, int p2)
+            {
+                x = p1;
+                y = p2;
+            }
+     
+        }
+        */
         bool ok = true;
+
+      //  Coord coord1 = new Coord();
        /* private void button1_Click(object sender, EventArgs e)
         {
             Graphics g = pictureBox1.CreateGraphics();
@@ -75,7 +88,9 @@ namespace OOP
             f = new Foursquare(side);
             if (ok)
                 f.Square(g);
-          g.DrawRectangle(pen, x, y, side, side);
+
+          //g.DrawRectangle(pen, x, y, side, side);
+         // Draw(Graphics g, Pen pen);
     }
 
 
@@ -124,7 +139,7 @@ namespace OOP
         {
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Black);
-            Figure f;
+            
 
             int x = Convert.ToInt32(x2.Text);
             Check(x);
@@ -134,10 +149,13 @@ namespace OOP
             Check(a);
             int b = Convert.ToInt32(side3.Text);
             Check(b);
-            f = new Rectangle(a, b);
+            Figure.Coord coord = new Figure.Coord(x, y);
+            Rectangle f = new Rectangle(a, b);
             if (ok)
+            {
                 f.Square(g);
-            g.DrawRectangle(pen, x, y, a, b);
+                f.Draw(g, pen, coord, a, b);
+            }
         }
 
         private void x3_KeyPress(object sender, KeyPressEventArgs e)
@@ -231,7 +249,6 @@ namespace OOP
         {
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Blue);
-            Figure f;
 
             int x = Convert.ToInt32(Xc.Text);
             Check(x);
@@ -239,10 +256,44 @@ namespace OOP
             Check(y);
             int circleRadius = Convert.ToInt32(radius.Text);
             Check(circleRadius);
-            f = new Circle(circleRadius);
+            Circle f = new Circle(circleRadius);
             if (ok)
+            {
                 f.Square(g);
-            g.DrawEllipse(pen, x, y, circleRadius, circleRadius);
+                f.Draw(g, pen, x, y, circleRadius);
+            }
+            //g.DrawEllipse(pen, x, y, circleRadius, circleRadius);
+        }
+
+        private void DrawTriangle_Click(object sender, EventArgs e)
+        {
+            Figure f;
+            
+        }
+
+        private void DrawParallelogram_Click(object sender, EventArgs e)
+        {
+            Graphics g = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Blue);
+            int x1 = Convert.ToInt32(x3.Text);
+            Check(x1);
+            int x2 = Convert.ToInt32(x4.Text);
+            Check(x2);
+            int y1 = Convert.ToInt32(y3.Text);
+            Check(y1);
+            int y2 = Convert.ToInt32(y4.Text);
+            Check(y2);
+            int side = Convert.ToInt32(side4.Text);
+            Check(side);
+            Figure.Coord coord1 = new Figure.Coord(x1, y1);
+            Figure.Coord coord2 = new Figure.Coord(x2, y2);
+    
+            Parallelogram f = new Parallelogram(coord1, coord2, side);
+            if (ok)
+            {
+                f.Square(g);
+                f.Draw(g, pen, coord1, coord2, side);
+            }
         }
 
     }
