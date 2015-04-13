@@ -80,9 +80,70 @@ namespace OOP
         }
         private void validationsTriangle()
         {
-
+            if ((x5.Text == "") || (y5.Text == "") || (x6.Text == "") || (y6.Text == "") || (x7.Text == "") || (y7.Text == ""))
+            {
+                MessageBox.Show("Заполните все поля");
+                ok = false;
+            }
+            else
+            {
+                if ((x5.Text == x6.Text) && (x5.Text == x7.Text) && (x6.Text == x7.Text))
+                {
+                    MessageBox.Show("Все параметры x равны");
+                    ok = false;
+                }
+                if ((y5.Text == y6.Text) && (y5.Text == y7.Text) && (y6.Text == y7.Text))
+                {
+                    MessageBox.Show("Все параметры y равны");
+                    ok = false;
+                }
+                if ((x5.Text==x6.Text)&&(y5.Text==y6.Text))
+                {
+                    ok = false;
+                    MessageBox.Show("точки А и В совпали");
+                }
+                if ((x6.Text == x7.Text) && (y6.Text == y7.Text))
+                {
+                    ok = false;
+                    MessageBox.Show("точки В и С совпали");
+                }
+                if ((x5.Text == x7.Text) && (y5.Text == y7.Text))
+                {
+                    ok = false;
+                    MessageBox.Show("точки А и С совпали");
+                }
+                if(ok)
+                {
+                    validationsData(Convert.ToInt32(x5.Text));
+                    validationsData(Convert.ToInt32(x6.Text));
+                    validationsData(Convert.ToInt32(x7.Text));
+                    validationsData(Convert.ToInt32(y5.Text));
+                    validationsData(Convert.ToInt32(y6.Text));
+                    validationsData(Convert.ToInt32(y7.Text));
+                }
+            }
         }
-
+        private void validationsParallelogram()
+        {
+            if((x3.Text=="")||(y3.Text=="")||(x4.Text=="")||(y4.Text=="")||(side4.Text==""))
+            {
+                MessageBox.Show("есть не заполненные поля");
+                ok = false;
+            }
+            else
+            {
+                if ((x3.Text == x4.Text) || (y3.Text == y4.Text))
+                    MessageBox.Show("координаты х и у не должны совпадать");
+                else
+                {
+                    validationsData(Convert.ToInt32(x3.Text));
+                    validationsData(Convert.ToInt32(y3.Text));
+                    validationsData(Convert.ToInt32(x4.Text));
+                    validationsData(Convert.ToInt32(y4.Text));
+                    validationsData(Convert.ToInt32(side4.Text));
+                }
+            }
+        }
         private void checkSymbols(KeyPressEventArgs e)
         {
             if ((!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"\d")) && e.KeyChar != 8)
@@ -241,47 +302,46 @@ namespace OOP
 
         private void DrawTriangle_Click(object sender, EventArgs e)
         {
+            ok = true;
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Blue);
-            int xA = Convert.ToInt32(x5.Text);
-            int yA = Convert.ToInt32(y5.Text);
-            int xB = Convert.ToInt32(x6.Text);
-            int yB = Convert.ToInt32(y6.Text);
-            int xC = Convert.ToInt32(x7.Text);
-            int yC = Convert.ToInt32(y7.Text);
- 
-            Figure.Coord coordA = new Figure.Coord(xA, yA);
-            Figure.Coord coordB = new Figure.Coord(xB, yB);
-            Figure.Coord coordC = new Figure.Coord(xC, yC);
-            Triangle f = new Triangle(coordA, coordB, coordC);
-            f.Square(g);
-            f.Draw(g, pen, coordA, coordB, coordC);
+            validationsTriangle();
+            if (ok)
+            {
+                int xA = Convert.ToInt32(x5.Text);
+                int yA = Convert.ToInt32(y5.Text);
+                int xB = Convert.ToInt32(x6.Text);
+                int yB = Convert.ToInt32(y6.Text);
+                int xC = Convert.ToInt32(x7.Text);
+                int yC = Convert.ToInt32(y7.Text);
+
+                Figure.Coord coordA = new Figure.Coord(xA, yA);
+                Figure.Coord coordB = new Figure.Coord(xB, yB);
+                Figure.Coord coordC = new Figure.Coord(xC, yC);
+                Triangle f = new Triangle(coordA, coordB, coordC);
+                f.Square(g);
+                f.Draw(g, pen, coordA, coordB, coordC);
+            }
         }
 
         private void DrawParallelogram_Click(object sender, EventArgs e)
         {
+            ok = true;
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Blue);
-            int x1 = Convert.ToInt32(x3.Text);
-            //Check(x1);
-            int x2 = Convert.ToInt32(x4.Text);
-            //Check(x2);
-            if (x1 == x2)
-                MessageBox.Show("координаты x не должны совпадать");     
-            int y1 = Convert.ToInt32(y3.Text);
-            //Check(y1);
-            int y2 = Convert.ToInt32(y4.Text);
-            //Check(y2);
-            if (y1 == y2)
-                MessageBox.Show("координаты y не должны совпадать"); 
-            int side = Convert.ToInt32(side4.Text);
-            //Check(side);
-            Figure.Coord coord1 = new Figure.Coord(x1, y1);
-            Figure.Coord coord2 = new Figure.Coord(x2, y2);
-    
-            Parallelogram f = new Parallelogram(coord1, coord2, side);
+            validationsParallelogram();
             if (ok)
             {
+                int x1 = Convert.ToInt32(x3.Text);
+                int x2 = Convert.ToInt32(x4.Text);
+                int y1 = Convert.ToInt32(y3.Text);
+                int y2 = Convert.ToInt32(y4.Text);
+                int side = Convert.ToInt32(side4.Text);
+                Figure.Coord coord1 = new Figure.Coord(x1, y1);
+                Figure.Coord coord2 = new Figure.Coord(x2, y2);
+
+                Parallelogram f = new Parallelogram(coord1, coord2, side);
+
                 f.Square(g);
                 f.Draw(g, pen, coord1, coord2, side);
             }
