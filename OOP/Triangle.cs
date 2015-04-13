@@ -21,15 +21,15 @@ namespace OOP
 
 
 
-        public Triangle(int x1, int y1, int x2, int y2, int x3, int y3)
+        public Triangle(Coord coord1, Coord coord2, Coord coord3)
         {
     
-            this.x1 = x1;
-            this.y1 = y1;
-            this.x2 = x2;
-            this.y2 = y2;
-            this.x3 = x3;
-            this.y3 = y3;
+            this.x1 = coord1.x;
+            this.y1 = coord1.y;
+            this.x2 = coord2.x;
+            this.y2 = coord2.y;
+            this.x3 = coord3.x;
+            this.y3 = coord3.y;
             this.color = color;
             double side1 = Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
             double side2 = Math.Sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));

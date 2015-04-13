@@ -17,53 +17,9 @@ namespace OOP
             InitializeComponent();
         }
 
-       /* public struct Coord 
-        {
-            public int x, y;
-             public Coord(int p1, int p2)
-            {
-                x = p1;
-                y = p2;
-            }
-     
-        }
-        */
         bool ok = true;
 
-      //  Coord coord1 = new Coord();
-       /* private void button1_Click(object sender, EventArgs e)
-        {
-            Graphics g = pictureBox1.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
-            List<Figure> listOfFigures = new List<Figure>();
-            Figure f;
-
-           f = new Foursquare (40, Color.Black);
-           listOfFigures.Add(f);
-           f.Square(g);
-
-            f = new Rectangle(120, 20, 80, 40, Color.Blue);
-            listOfFigures.Add(f);
-            f.Square(g);
-
-            f = new Triangle(80, 80, 100, 120, 40, 160, Color.BlueViolet);
-            listOfFigures.Add(f);
-            f.Square(g);
-
-            f = new Parallelogram(120, 140, 140, 100, 80, Color.Red);
-            listOfFigures.Add(f);
-            f.Square(g);
-
-            f = new Circle(240, 80, 60, Color.Pink);
-            listOfFigures.Add(f);
-            f.Square(g);
-
-            foreach (Figure figure in listOfFigures) ;
-              //  figure.Draw(g, pen);
-        }
-        */
-
-        private void Check(int a)
+        private void validationsData(int a)
         {
             if (a > 250)
             {
@@ -72,31 +28,60 @@ namespace OOP
             }
  
         }
-        private void DrawFoursquare_Click(object sender, EventArgs e)
+
+        private void validationsRectangle()
         {
-            
-            Graphics g = pictureBox1.CreateGraphics();
-            Pen pen = new Pen(Color.Red);
-
-
-            int x = Convert.ToInt32(x1.Text);
-            Check(x);
-            int y = Convert.ToInt32(y1.Text);
-            Check(y);
-            int side = Convert.ToInt32(side1.Text);
-            Check(side);
-            Figure.Coord coordinate = new Figure.Coord(x, y);
-            Foursquare f = new Foursquare(side);
-            if (ok)
+            if ((x2.Text == "") || (y2.Text == "") || (side2.Text == "") || (side3.Text == ""))
             {
-                f.Square(g);
-                f.Draw(g, pen, coordinate, side);
+                MessageBox.Show("Все поля должны быть заполнены");
+                ok = false;
             }
+            else
+            {
+                validationsData(Convert.ToInt32(x2.Text));
+                validationsData(Convert.ToInt32(y2.Text));
+                validationsData(Convert.ToInt32(side2.Text));
+                validationsData(Convert.ToInt32(side3.Text));
+                
+            }
+        }
+        private void validationsFoursquare()
+        {
+            if ((x1.Text == "")||(y1.Text =="")||(side1.Text == ""))
+            {
+                MessageBox.Show("Заполните все поля");
+                ok = false;
+            }
+            else
+            {
+                validationsData(Convert.ToInt32(x1.Text));
+                validationsData(Convert.ToInt32(y1.Text));
+                validationsData(Convert.ToInt32(side1.Text));
+            }
+ 
+        }
+        private void validationsCircle()
+        {
+            if((Xc.Text=="")||(Yc.Text=="")||(radius.Text==""))
+            {
+                MessageBox.Show("Есть пустые поля!!!");
+                ok = false;
+            }
+            else 
+            {
+                validationsData(Convert.ToInt32(Xc.Text));
+                validationsData(Convert.ToInt32(Yc.Text));
+                if (Convert.ToInt32(radius.Text) > 250)
+                {
+                    MessageBox.Show("Значение радиуса больше 250");
+                    ok = false;
+                }
+            }
+        }
+        private void validationsTriangle()
+        {
 
-          //g.DrawRectangle(pen, x, y, side, side);
-         // Draw(Graphics g, Pen pen);
-    }
-
+        }
 
         private void checkSymbols(KeyPressEventArgs e)
         {
@@ -139,29 +124,6 @@ namespace OOP
             checkSymbols(e);
         }
 
-        private void DrawRectangle_Click(object sender, EventArgs e)
-        {
-            Graphics g = pictureBox1.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
-            
-
-            int x = Convert.ToInt32(x2.Text);
-            Check(x);
-            int y = Convert.ToInt32(y2.Text);
-            Check(y);
-            int a = Convert.ToInt32(side2.Text);
-            Check(a);
-            int b = Convert.ToInt32(side3.Text);
-            Check(b);
-            Figure.Coord coord = new Figure.Coord(x, y);
-            Rectangle f = new Rectangle(a, b);
-            if (ok)
-            {
-                f.Square(g);
-             
-                f.Draw(g, pen, coord, a, b);
-            }
-        }
 
         private void x3_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -218,26 +180,63 @@ namespace OOP
         {
             checkSymbols(e);
         }
+        private void DrawFoursquare_Click(object sender, EventArgs e)
+        {
+            ok = true;
+            Graphics g = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Red);
+            validationsFoursquare();
 
+
+            if (ok)
+            {
+                int x = Convert.ToInt32(x1.Text);
+                int y = Convert.ToInt32(y1.Text);
+                int side = Convert.ToInt32(side1.Text);
+                Figure.Coord coordinate = new Figure.Coord(x, y);
+                Foursquare f = new Foursquare(side);
+
+                f.Square(g);
+                f.Draw(g, pen, coordinate, side);
+            }
+        }
+        private void DrawRectangle_Click(object sender, EventArgs e)
+        {
+            ok = true;
+            Graphics g = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+
+            validationsRectangle();
+            if (ok)
+            {
+                int x = Convert.ToInt32(x2.Text);
+                int y = Convert.ToInt32(y2.Text);
+                int a = Convert.ToInt32(side2.Text);
+                int b = Convert.ToInt32(side3.Text);
+
+                Figure.Coord coord = new Figure.Coord(x, y);
+                Rectangle f = new Rectangle(a, b);
+
+                f.Square(g);
+                f.Draw(g, pen, coord, a, b);
+            }
+        }
         private void DrawCircle_Click(object sender, EventArgs e)
         {
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Blue);
-
-            int x = Convert.ToInt32(Xc.Text);
-            Check(x);
-            int y = Convert.ToInt32(Yc.Text);
-            Check(y);
-            Figure.Coord coordinate = new Figure.Coord(x, y);
-            float circleRadius = Convert.ToInt32(radius.Text);
-           // Check(circleRadius);
-            Circle f = new Circle(circleRadius, coordinate);
+            validationsCircle();
             if (ok)
             {
+                int x = Convert.ToInt32(Xc.Text);
+                int y = Convert.ToInt32(Yc.Text);
+                Figure.Coord coordinate = new Figure.Coord(x, y);
+                float circleRadius = Convert.ToInt32(radius.Text);
+
+                Circle f = new Circle(circleRadius, coordinate);
                 f.Square(g);
-                f.Draw(g, pen,coordinate, circleRadius);
+                f.Draw(g, pen, coordinate, circleRadius);
             }
-            //g.DrawEllipse(pen, x, y, circleRadius, circleRadius);
         }
 
         private void DrawTriangle_Click(object sender, EventArgs e)
@@ -250,14 +249,11 @@ namespace OOP
             int yB = Convert.ToInt32(y6.Text);
             int xC = Convert.ToInt32(x7.Text);
             int yC = Convert.ToInt32(y7.Text);
-            if ((xA == xB)||(xA == xC)||(xB == xC))
-                MessageBox.Show("координаты x не должны совпадать"); 
-            if ((yA == yB)||(yA == yC)||(yB == yC))
-                MessageBox.Show("координаты y не должны совпадать"); 
-            Triangle f = new Triangle(xA, yA, xB, yB, xC, yC);
+ 
             Figure.Coord coordA = new Figure.Coord(xA, yA);
             Figure.Coord coordB = new Figure.Coord(xB, yB);
             Figure.Coord coordC = new Figure.Coord(xC, yC);
+            Triangle f = new Triangle(coordA, coordB, coordC);
             f.Square(g);
             f.Draw(g, pen, coordA, coordB, coordC);
         }
@@ -267,19 +263,19 @@ namespace OOP
             Graphics g = pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Blue);
             int x1 = Convert.ToInt32(x3.Text);
-            Check(x1);
+            //Check(x1);
             int x2 = Convert.ToInt32(x4.Text);
-            Check(x2);
+            //Check(x2);
             if (x1 == x2)
                 MessageBox.Show("координаты x не должны совпадать");     
             int y1 = Convert.ToInt32(y3.Text);
-            Check(y1);
+            //Check(y1);
             int y2 = Convert.ToInt32(y4.Text);
-            Check(y2);
+            //Check(y2);
             if (y1 == y2)
                 MessageBox.Show("координаты y не должны совпадать"); 
             int side = Convert.ToInt32(side4.Text);
-            Check(side);
+            //Check(side);
             Figure.Coord coord1 = new Figure.Coord(x1, y1);
             Figure.Coord coord2 = new Figure.Coord(x2, y2);
     
@@ -289,6 +285,11 @@ namespace OOP
                 f.Square(g);
                 f.Draw(g, pen, coord1, coord2, side);
             }
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            x1.Visible = false;
         }
 
     }
