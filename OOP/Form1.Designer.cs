@@ -62,6 +62,21 @@
             this.Yc = new System.Windows.Forms.TextBox();
             this.radius = new System.Windows.Forms.TextBox();
             this.DrawTriangle = new System.Windows.Forms.Button();
+            this.x5 = new System.Windows.Forms.TextBox();
+            this.y5 = new System.Windows.Forms.TextBox();
+            this.x6 = new System.Windows.Forms.TextBox();
+            this.y6 = new System.Windows.Forms.TextBox();
+            this.x7 = new System.Windows.Forms.TextBox();
+            this.y7 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -322,7 +337,7 @@
             // 
             // DrawCircle
             // 
-            this.DrawCircle.Location = new System.Drawing.Point(688, 261);
+            this.DrawCircle.Location = new System.Drawing.Point(688, 286);
             this.DrawCircle.Name = "DrawCircle";
             this.DrawCircle.Size = new System.Drawing.Size(121, 23);
             this.DrawCircle.TabIndex = 36;
@@ -332,7 +347,7 @@
             // 
             // Xc
             // 
-            this.Xc.Location = new System.Drawing.Point(350, 261);
+            this.Xc.Location = new System.Drawing.Point(350, 289);
             this.Xc.Name = "Xc";
             this.Xc.Size = new System.Drawing.Size(62, 20);
             this.Xc.TabIndex = 37;
@@ -340,7 +355,7 @@
             // 
             // Yc
             // 
-            this.Yc.Location = new System.Drawing.Point(445, 261);
+            this.Yc.Location = new System.Drawing.Point(444, 289);
             this.Yc.Name = "Yc";
             this.Yc.Size = new System.Drawing.Size(62, 20);
             this.Yc.TabIndex = 38;
@@ -348,7 +363,7 @@
             // 
             // radius
             // 
-            this.radius.Location = new System.Drawing.Point(544, 264);
+            this.radius.Location = new System.Drawing.Point(543, 289);
             this.radius.Name = "radius";
             this.radius.Size = new System.Drawing.Size(62, 20);
             this.radius.TabIndex = 39;
@@ -364,11 +379,149 @@
             this.DrawTriangle.UseVisualStyleBackColor = true;
             this.DrawTriangle.Click += new System.EventHandler(this.DrawTriangle_Click);
             // 
+            // x5
+            // 
+            this.x5.Location = new System.Drawing.Point(350, 205);
+            this.x5.Name = "x5";
+            this.x5.Size = new System.Drawing.Size(62, 20);
+            this.x5.TabIndex = 41;
+            // 
+            // y5
+            // 
+            this.y5.Location = new System.Drawing.Point(350, 250);
+            this.y5.Name = "y5";
+            this.y5.Size = new System.Drawing.Size(62, 20);
+            this.y5.TabIndex = 42;
+            // 
+            // x6
+            // 
+            this.x6.Location = new System.Drawing.Point(444, 205);
+            this.x6.Name = "x6";
+            this.x6.Size = new System.Drawing.Size(62, 20);
+            this.x6.TabIndex = 43;
+            // 
+            // y6
+            // 
+            this.y6.Location = new System.Drawing.Point(444, 250);
+            this.y6.Name = "y6";
+            this.y6.Size = new System.Drawing.Size(62, 20);
+            this.y6.TabIndex = 44;
+            // 
+            // x7
+            // 
+            this.x7.Location = new System.Drawing.Point(532, 208);
+            this.x7.Name = "x7";
+            this.x7.Size = new System.Drawing.Size(62, 20);
+            this.x7.TabIndex = 45;
+            // 
+            // y7
+            // 
+            this.y7.Location = new System.Drawing.Point(532, 250);
+            this.y7.Name = "y7";
+            this.y7.Size = new System.Drawing.Size(62, 20);
+            this.y7.TabIndex = 46;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(372, 186);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(12, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "x";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(469, 189);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(12, 13);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "x";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(559, 186);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(12, 13);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "x";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(372, 273);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(12, 13);
+            this.label15.TabIndex = 50;
+            this.label15.Text = "x";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(372, 228);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(12, 13);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "y";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(469, 228);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(12, 13);
+            this.label17.TabIndex = 52;
+            this.label17.Text = "y";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(559, 234);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(12, 13);
+            this.label18.TabIndex = 53;
+            this.label18.Text = "y";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(469, 273);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(12, 13);
+            this.label19.TabIndex = 54;
+            this.label19.Text = "y";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(559, 273);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(35, 13);
+            this.label20.TabIndex = 55;
+            this.label20.Text = "radius";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 380);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.y7);
+            this.Controls.Add(this.x7);
+            this.Controls.Add(this.y6);
+            this.Controls.Add(this.x6);
+            this.Controls.Add(this.y5);
+            this.Controls.Add(this.x5);
             this.Controls.Add(this.DrawTriangle);
             this.Controls.Add(this.radius);
             this.Controls.Add(this.Yc);
@@ -447,5 +600,20 @@
         private System.Windows.Forms.TextBox Yc;
         private System.Windows.Forms.TextBox radius;
         private System.Windows.Forms.Button DrawTriangle;
+        private System.Windows.Forms.TextBox x5;
+        private System.Windows.Forms.TextBox y5;
+        private System.Windows.Forms.TextBox x6;
+        private System.Windows.Forms.TextBox y6;
+        private System.Windows.Forms.TextBox x7;
+        private System.Windows.Forms.TextBox y7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

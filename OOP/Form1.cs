@@ -242,8 +242,24 @@ namespace OOP
 
         private void DrawTriangle_Click(object sender, EventArgs e)
         {
-            Figure f;
-            
+            Graphics g = pictureBox1.CreateGraphics();
+            Pen pen = new Pen(Color.Blue);
+            int xA = Convert.ToInt32(x5.Text);
+            int yA = Convert.ToInt32(y5.Text);
+            int xB = Convert.ToInt32(x6.Text);
+            int yB = Convert.ToInt32(y6.Text);
+            int xC = Convert.ToInt32(x7.Text);
+            int yC = Convert.ToInt32(y7.Text);
+            if ((xA == xB)||(xA == xC)||(xB == xC))
+                MessageBox.Show("координаты x не должны совпадать"); 
+            if ((yA == yB)||(yA == yC)||(yB == yC))
+                MessageBox.Show("координаты y не должны совпадать"); 
+            Triangle f = new Triangle(xA, yA, xB, yB, xC, yC);
+            Figure.Coord coordA = new Figure.Coord(xA, yA);
+            Figure.Coord coordB = new Figure.Coord(xB, yB);
+            Figure.Coord coordC = new Figure.Coord(xC, yC);
+            f.Square(g);
+            f.Draw(g, pen, coordA, coordB, coordC);
         }
 
         private void DrawParallelogram_Click(object sender, EventArgs e)

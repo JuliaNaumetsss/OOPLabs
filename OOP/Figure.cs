@@ -65,5 +65,13 @@ namespace OOP
             pen.Color = Color.Green;
             g.DrawRectangle(pen, coordinate.x, coordinate.y, length, length);
         } 
+        // draw triangle
+        public void Draw(Graphics g, Pen pen, Coord coordinate1, Coord coordinate2, Coord coordinate3)
+        {
+            pen.Color = Color.Gray;
+            g.DrawLine(pen, coordinate1.x, coordinate1.y, coordinate3.x, coordinate3.y);
+            g.DrawLine(pen, coordinate3.x, coordinate3.y, coordinate2.x, coordinate2.y);
+            g.DrawLine(pen, coordinate1.x, coordinate1.y, coordinate2.x, coordinate2.y);
+        }
     }
 }
