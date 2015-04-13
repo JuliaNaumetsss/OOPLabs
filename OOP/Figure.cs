@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace OOP
 {
 
-    public abstract class Figure
+    public class Figure
     {
         protected Color color; //feature common to all
         protected SolidBrush brush = new SolidBrush(Color.Black);

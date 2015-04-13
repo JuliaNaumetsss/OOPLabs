@@ -18,12 +18,12 @@ namespace OOP
         }
 
         bool ok = true;
-
+        //all fields less than 350
         private void validationsData(int a)
         {
             if (a > 350)
             {
-                MessageBox.Show("введите корректные данные(все значение меньше 250)");
+                MessageBox.Show("введите корректные данные(все значение меньше 350)");
                 ok = false;
             }
  
@@ -144,6 +144,7 @@ namespace OOP
                 }
             }
         }
+        //limit on input (only numbers)
         private void checkSymbols(KeyPressEventArgs e)
         {
             if ((!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"\d")) && e.KeyChar != 8)
@@ -409,6 +410,12 @@ namespace OOP
             y2.Text = "";
             parametr1.Text = "";
             parametr2.Text = "";
+        }
+
+        private void CleanField_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+            pictureBox1.Invalidate();
         }
 
     }

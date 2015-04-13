@@ -26,7 +26,6 @@ namespace OOP
 
         public override void Square(Graphics g)
         {
-            
            Point drawPoint = new Point(x+30, y+10);
             g.DrawString(square.ToString(),drawFont,brush,drawPoint, drawFormat);
         }

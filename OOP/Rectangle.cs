@@ -17,7 +17,6 @@ namespace OOP
 
         public Rectangle(int width, int length, Coord coordinate)
         {
-      
             this.side1 = width;
             this.side2 = length;
             square = side1 * side2;

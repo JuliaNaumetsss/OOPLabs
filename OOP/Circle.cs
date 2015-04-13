@@ -17,8 +17,6 @@ namespace OOP
 
         public Circle(float radius, Coord coordinate)
         {
-
-           // this.x
             this.color = color;
             this.radius = radius;
             this.x = coordinate.x;
