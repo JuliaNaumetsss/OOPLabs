@@ -347,7 +347,10 @@ namespace OOP
             }
         }
 
-
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            x1.Visible = false;
+        }
 
     }
 }
