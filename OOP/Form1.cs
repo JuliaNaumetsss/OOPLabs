@@ -347,6 +347,121 @@ namespace OOP
             }
         }
 
+        private void RBFoursquare_Click(object sender, EventArgs e)
+        {
+            x1.Visible = true;
+            y1.Visible = true;
+            parametr1.Visible = true;
+            DrawFoursquare.Visible = true;
+            x2.Visible = false;
+            y2.Visible = false;
+            parametr2.Visible = false;
+            DrawRectangle.Visible = false;
+            DrawCircle.Visible = false;
+            DrawTriangle.Visible = false;
+            DrawParallelogram.Visible = false;
+            label1.Visible = true;
+            label2.Visible = false;
+            label3.Visible = true;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = true;
+            label8.Visible = false;
+        }
+
+        private void RBRectangle_Click(object sender, EventArgs e)
+        {
+            x1.Visible = true;
+            y1.Visible = true;
+            parametr1.Visible = true;
+            parametr2.Visible = true;
+            DrawRectangle.Visible = true;
+            x2.Visible = false;
+            y2.Visible = false;
+            DrawCircle.Visible = false;
+            DrawTriangle.Visible = false;
+            DrawParallelogram.Visible = false;
+            DrawFoursquare.Visible = false;
+            label1.Visible = true;
+            label2.Visible = false;
+            label3.Visible = true;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = true;
+            label8.Visible = true;
+        }
+
+        private void RBParallelogram_Click(object sender, EventArgs e)
+        {
+            x1.Visible = true;
+            y1.Visible = true;
+            x2.Visible = true;
+            y2.Visible = true;
+            parametr1.Visible = true;
+            DrawParallelogram.Visible = true;
+            parametr2.Visible = false;
+            DrawCircle.Visible = false;
+            DrawTriangle.Visible = false;
+            DrawRectangle.Visible = false;
+            DrawFoursquare.Visible = false;
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = true;
+            label8.Visible = false;
+        }
+
+        private void RBTriangle_Click(object sender, EventArgs e)
+        {
+            x1.Visible = true;
+            y1.Visible = true;
+            x2.Visible = true;
+            y2.Visible = true;
+            parametr1.Visible = true;
+            parametr2.Visible = true;
+            DrawTriangle.Visible = true;
+            DrawCircle.Visible = false;
+            DrawParallelogram.Visible = false;
+            DrawRectangle.Visible = false;
+            DrawFoursquare.Visible = false;
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            label7.Visible = false;
+            label8.Visible = false;
+        }
+
+        private void RBCircle_Click(object sender, EventArgs e)
+        {
+            x1.Visible = true;
+            y1.Visible = true;
+            parametr1.Visible = true;
+            DrawCircle.Visible = true;
+            x2.Visible = false;
+            y2.Visible = false;
+            parametr2.Visible = false;
+            DrawTriangle.Visible = false;
+            DrawParallelogram.Visible = false;
+            DrawRectangle.Visible = false;
+            DrawFoursquare.Visible = false;
+            label1.Visible = true;
+            label2.Visible = false;
+            label3.Visible = true;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = true;
+            label8.Visible = false;
+        }
+
 
 
     }
