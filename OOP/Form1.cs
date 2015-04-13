@@ -21,7 +21,7 @@ namespace OOP
 
         private void validationsData(int a)
         {
-            if (a > 250)
+            if (a > 350)
             {
                 MessageBox.Show("введите корректные данные(все значение меньше 250)");
                 ok = false;
@@ -160,10 +160,6 @@ namespace OOP
             checkSymbols(e);
         }
 
-        private void side1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
 
         private void x2_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -174,73 +170,16 @@ namespace OOP
         {
             checkSymbols(e);
         }
-
-        private void side2_KeyPress(object sender, KeyPressEventArgs e)
+        private void parametr1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkSymbols(e);
+        }
+        private void parametr2_KeyPress(object sender, KeyPressEventArgs e)
         {
             checkSymbols(e);
         }
 
-        private void side3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
 
-
-        private void x3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void y3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void x4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void y4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void x5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void y5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void x6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void y6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        
-        private void Xc_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void Yc_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
-
-        private void radius_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            checkSymbols(e);
-        }
         private void DrawFoursquare_Click(object sender, EventArgs e)
         {
             ok = true;
@@ -462,7 +401,15 @@ namespace OOP
             label8.Visible = false;
         }
 
-
+        private void CleanCoord_Click(object sender, EventArgs e)
+        {
+            x1.Text = "";
+            x2.Text = "";
+            y1.Text = "";
+            y2.Text = "";
+            parametr1.Text = "";
+            parametr2.Text = "";
+        }
 
     }
 }
