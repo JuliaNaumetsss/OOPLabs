@@ -15,25 +15,22 @@ namespace OOP
         private int side2;
         private int square;
 
-        public Rectangle(int width, int length)
+        public Rectangle(int width, int length, Coord coordinate)
         {
       
             this.side1 = width;
             this.side2 = length;
             square = side1 * side2;
+            this.x = coordinate.x;
+            this.y = coordinate.y;
 
         }
         public override void Square(Graphics g)
         {
 
-            Point drawPoint = new Point(170, 40);
+            Point drawPoint = new Point(x+30, y+15);
             g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
         }
 
-       /* public override void Draw(Graphics g, Pen pen)
-        {
-            pen.Color = color;
-            g.DrawRectangle(pen, x, y, side1, side2);
-        }*/
     }
 }

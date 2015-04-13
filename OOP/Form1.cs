@@ -255,7 +255,7 @@ namespace OOP
                 int y = Convert.ToInt32(y1.Text);
                 int side = Convert.ToInt32(parametr1.Text);
                 Figure.Coord coordinate = new Figure.Coord(x, y);
-                Foursquare f = new Foursquare(side);
+                Foursquare f = new Foursquare(side, coordinate);
 
                 f.Square(g);
                 f.Draw(g, pen, coordinate, side);
@@ -276,7 +276,7 @@ namespace OOP
                 int b = Convert.ToInt32(parametr2.Text);
 
                 Figure.Coord coord = new Figure.Coord(x, y);
-                Rectangle f = new Rectangle(a, b);
+                Rectangle f = new Rectangle(a, b, coord);
 
                 f.Square(g);
                 f.Draw(g, pen, coord, a, b);

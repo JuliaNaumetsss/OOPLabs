@@ -15,24 +15,21 @@ namespace OOP
         private int x;
         private int y;
 
-        public Foursquare(int side)
+        public Foursquare(int side, Coord coordinate)
         {
             this.color = color;
             this.side = side;
             square = side * side;
+            this.x = coordinate.x;
+            this.y = coordinate.y;
         }
 
         public override void Square(Graphics g)
         {
             
-           Point drawPoint = new Point(70, 40);
+           Point drawPoint = new Point(x+30, y+10);
             g.DrawString(square.ToString(),drawFont,brush,drawPoint, drawFormat);
         }
 
-       
-        //public override void Draw(System.Drawing.Graphics g, System.Drawing.Pen pen)
-        //{ 
-        //  g.DrawRectangle(pen, x, y, side, side);
-        //}
     }
 }

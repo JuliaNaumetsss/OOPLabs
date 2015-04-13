@@ -34,16 +34,9 @@ namespace OOP
         public override void Square(Graphics g)
         {
 
-            Point drawPoint = new Point(180, 115);
+            Point drawPoint = new Point(x1+10, y1+10);
             g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
         }
-      /*  public override void Draw(System.Drawing.Graphics g, System.Drawing.Pen pen)
-        {
-            pen.Color = color;
-            g.DrawLine(pen, x1, y1, x2, y2);
-            g.DrawLine(pen, x2, y2, x2+length, y2);
-            g.DrawLine(pen, x2 + length, y2, x1+length, y1);
-            g.DrawLine(pen, x1 + length, y1, x1, y1);
-        }*/
+
     }
 }
