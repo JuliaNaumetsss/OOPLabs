@@ -194,11 +194,11 @@ namespace OOP
                 int x = Convert.ToInt32(x1.Text);
                 int y = Convert.ToInt32(y1.Text);
                 int side = Convert.ToInt32(parametr1.Text);
-                Figure.Coord coordinate = new Figure.Coord(x, y);
+                Coord coordinate = new Coord(x, y);
                 Foursquare f = new Foursquare(side, coordinate);
 
-                f.Square(g);
-                f.Draw(g, pen, coordinate, side);
+                //f.Square();
+                DrawingFigures.Draw(g, pen, coordinate, side);
             }
         }
         private void DrawRectangle_Click(object sender, EventArgs e)
@@ -215,11 +215,11 @@ namespace OOP
                 int a = Convert.ToInt32(parametr1.Text);
                 int b = Convert.ToInt32(parametr2.Text);
 
-                Figure.Coord coord = new Figure.Coord(x, y);
+                Coord coord = new Coord(x, y);
                 Rectangle f = new Rectangle(a, b, coord);
 
-                f.Square(g);
-                f.Draw(g, pen, coord, a, b);
+               // f.Square(g);
+                DrawingFigures.Draw(g, pen, coord, a, b);
             }
         }
         private void DrawCircle_Click(object sender, EventArgs e)
@@ -231,12 +231,12 @@ namespace OOP
             {
                 int x = Convert.ToInt32(x1.Text);
                 int y = Convert.ToInt32(y1.Text);
-                Figure.Coord coordinate = new Figure.Coord(x, y);
+                Coord coordinate = new Coord(x, y);
                 float circleRadius = Convert.ToInt32(parametr1.Text);
 
                 Circle f = new Circle(circleRadius, coordinate);
-                f.Square(g);
-                f.Draw(g, pen, coordinate, circleRadius);
+               // f.Square(g);
+                DrawingFigures.Draw(g, pen, coordinate, circleRadius);
             }
         }
 
@@ -255,12 +255,12 @@ namespace OOP
                 int xC = Convert.ToInt32(parametr1.Text);
                 int yC = Convert.ToInt32(parametr2.Text);
 
-                Figure.Coord coordA = new Figure.Coord(xA, yA);
-                Figure.Coord coordB = new Figure.Coord(xB, yB);
-                Figure.Coord coordC = new Figure.Coord(xC, yC);
+                Coord coordA = new Coord(xA, yA);
+                Coord coordB = new Coord(xB, yB);
+                Coord coordC = new Coord(xC, yC);
                 Triangle f = new Triangle(coordA, coordB, coordC);
-                f.Square(g);
-                f.Draw(g, pen, coordA, coordB, coordC);
+                //f.Square(g);
+                DrawingFigures.Draw(g, pen, coordA, coordB, coordC);
             }
         }
 
@@ -277,13 +277,13 @@ namespace OOP
                 int yA = Convert.ToInt32(y1.Text);
                 int yB = Convert.ToInt32(y2.Text);
                 int side = Convert.ToInt32(parametr1.Text);
-                Figure.Coord coord1 = new Figure.Coord(xA, yA);
-                Figure.Coord coord2 = new Figure.Coord(xB, yB);
+                Coord coord1 = new Coord(xA, yA);
+                Coord coord2 = new Coord(xB, yB);
 
                 Parallelogram f = new Parallelogram(coord1, coord2, side);
 
-                f.Square(g);
-                f.Draw(g, pen, coord1, coord2, side);
+                //f.Square(g);
+                DrawingFigures.Draw(g, pen, coord1, coord2, side);
             }
         }
 

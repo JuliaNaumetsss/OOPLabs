@@ -7,15 +7,24 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-
-    public class Figure
+    public struct Coord
     {
-        protected Color color; //feature common to all
-        protected SolidBrush brush = new SolidBrush(Color.Black);
-        protected StringFormat drawFormat = new StringFormat(StringFormatFlags.DirectionRightToLeft);
-        protected Font drawFont = new Font("Arial", 7);
+        public int x, y;
+        public Coord(int p1, int p2)
+        {
+            x = p1;
+            y = p2;
+        }
 
-        public struct Coord
+    }
+    public abstract class Figure
+    {
+        public Color color; //feature common to all
+        public SolidBrush brush = new SolidBrush(Color.Black);
+        public StringFormat drawFormat = new StringFormat(StringFormatFlags.DirectionRightToLeft);
+        public Font drawFont = new Font("Arial", 7);
+
+      /*  public struct Coord
         {
             public int x, y;
             public Coord(int p1, int p2)
@@ -24,17 +33,13 @@ namespace OOP
                 y = p2;
             }
 
-        }
+        }*/
 
-        public virtual void Square(Graphics g)
-        {
-
-            //calculation of area figures
-        }
-
+        public abstract double Square();
+        
 
         // draw circle
-        public void Draw(Graphics g, Pen pen, Coord coordinate, float circleRadius)
+       /* public void Draw(Graphics g, Pen pen, Coord coordinate, float circleRadius)
         {
             pen.Color = Color.Red;
             
@@ -72,6 +77,6 @@ namespace OOP
             g.DrawLine(pen, coordinate1.x, coordinate1.y, coordinate3.x, coordinate3.y);
             g.DrawLine(pen, coordinate3.x, coordinate3.y, coordinate2.x, coordinate2.y);
             g.DrawLine(pen, coordinate1.x, coordinate1.y, coordinate2.x, coordinate2.y);
-        }
+        }*/
     }
 }

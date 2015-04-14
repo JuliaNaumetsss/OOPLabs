@@ -19,16 +19,18 @@ namespace OOP
         {
             this.side1 = width;
             this.side2 = length;
-            square = side1 * side2;
+
             this.x = coordinate.x;
             this.y = coordinate.y;
 
         }
-        public override void Square(Graphics g)
+        public override double Square()
         {
 
-            Point drawPoint = new Point(x+30, y+15);
-            g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
+            //Point drawPoint = new Point(x+30, y+15);
+            //g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
+            square = side1 * side2;
+            return square;
         }
 
     }

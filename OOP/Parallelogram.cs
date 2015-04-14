@@ -9,8 +9,8 @@ namespace OOP
 {
     class Parallelogram : Figure
     {
-        private int x1;
-        private int y1;
+        public int x1;
+        public int y1;
         private int x2;
         private int y2;
         private int length;
@@ -27,15 +27,17 @@ namespace OOP
             this.x2 =coord2.x;
             this.y2 = coord2.y;
             this.length = length;
-            square = Math.Abs(y1 - y2) * length;
+
       
         }
 
-        public override void Square(Graphics g)
+        public override double Square()
         {
 
-            Point drawPoint = new Point(x1+10, y1+10);
-            g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
+           // Point drawPoint = new Point(x1+10, y1+10);
+           // g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
+            square = Math.Abs(y1 - y2) * length;
+            return square;
         }
 
     }

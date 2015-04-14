@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="DrawingFigures.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

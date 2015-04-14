@@ -22,14 +22,16 @@ namespace OOP
             this.x = coordinate.x;
             this.y = coordinate.y;
 
-            square = radius * radius * Math.PI;
+            
 
         }
-        public override void Square(Graphics g)
+        public override double Square()
         {
+            square = radius * radius * Math.PI;
+            /*Point drawPoint = new Point(x+50, y+25);
 
-            Point drawPoint = new Point(x+50, y+25);
-            g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);
+            g.DrawString(square.ToString(), drawFont, brush, drawPoint, drawFormat);*/
+            return square;
         }
 
     }
